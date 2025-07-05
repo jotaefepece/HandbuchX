@@ -6,25 +6,25 @@ Establecer una conexión segura entre una carpeta local y un repositorio
 remoto en GitHub, utilizando autenticación por clave SSH, evitando el 
 uso de usuario/contraseña.
 
----
-
-## 🧰 Requisitos previos
+## Requisitos previos
 
 - Tener una cuenta en GitHub.
 - Tener Git instalado en tu sistema.
 - Tener una carpeta local ya creada con contenido.
 
----
-
 ## 🪪 Paso 1: Verificar y generar clave SSH
 
-```bash
-ls ~/.ssh #revisión de claves#
-ssh-keygen -t ed2559 -C "josepoblbezas@gmail.com" #generando nueva#
-eval "$(ssh-agent -s)" #añadir la clave nueva#
-ssh-add ~/.ssh/id_ed2559
-cat ~/.ssh/id_ed2559.pub #para copiar la clave nueva pública#
-```bash
+**Revisión de claves**
+`ls ~/.ssh` 
+**Generando clave nueva**
+`ssh-keygen -t ed2559 -C "jpoblbeas@gmail.com"`<!-- correo ficticio -->
+
+**Añadir la clave nueva**
+`eval "$(ssh-agent -s)"`
+`ssh-add ~/.ssh/id_ed2559`
+**Para copiar la clave nueva pública**
+`cat ~/.ssh/id_ed2559.pub` 
+
 
 ## 🪪 Paso 2: Agregar clave en GitHub
 
@@ -36,18 +36,34 @@ Luego indica clave aceptada (y se reporta vía correo).
 
 ## 🪪 Paso 3: Inicio de git
 
-echo "# HandbuchX" >> README.md #aquí es sólo crear el archivo#
-git init
-git add README.md
-git commit -m "Verfahrensübernahme" #para poner un nombre al aporte#
-git remote add origin https://github.com/jotaefepece/Unterlagen.git
-#si se escribió mal el nombre se puede corregir con#
-git remote set-url origin git@github.com:jotaefepece/NombreCorrecto.git
-git branch -M main #ya para subir el contenido#
-git push -u origin main
+**Aquí es sólo crear el archivo**
+`echo "# HandbuchX" >> README.md` 
+`git init`
+`git add README.md`
+**Para poner un nombre al aporte**
+`git commit -m "Verfahrensübernahme"` 
+`git remote add origin https://github.com/jotaefepece/Unterlagen.git`
+**Si se escribió mal el nombre se puede corregir con**
+`git remote set-url origin git@github.com:jotaefe/NombreCorrecto.git`
+**Ya para subir el contenido**
+`git branch -M main` 
+`git push -u origin main`
 
-## 🪪 Paso 4: Verificación
+## 🪪 Paso 4: Verificación y agregando contenido
 
-```bash
-ssh -T git@github.com #aquí se va a mostrar un saludo#
+**Aquí se va a mostrar un saludo**
+`ssh -T git@github.com` 
+**Para agregar todo el contenido incluyendo subcarpetas**
+`git add .`
+**Sólo para agregar una subcarpeta**
+`git add nombre-de-la-subcarpeta/` 
+**Para chequear que se está listo para subir**
+`git status`  
+**Poner nombre a la actualización a subir**
+`git commit -m "Poner-nombre-de-actualización-GitHub"`
+**Para subir la actualización**
+`git push` 
+**Verificar que no hay pendientes para subir**
+`git status`
+
 
