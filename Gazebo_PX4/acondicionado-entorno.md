@@ -1,6 +1,6 @@
-# 🚁 Instalación del entorno PX4 + Gazebo en Fedora 39 (XFCE)
+# Instalación del entorno PX4 + Gazebo en Fedora 39 (XFCE)
 
-## 🎯 Objetivo
+## Objetivo
 
 Configurar desde cero un entorno funcional para simular drones con **PX4 Autopilot** y
  **Gazebo** en **Fedora 39 XFCE**, documentando cada paso validado para asegurar su correcta ejecución.
@@ -17,7 +17,8 @@ sudo dnf install git cmake ninja-build gcc-c++ python3-pip \
     python3-yaml python3-pyserial python3-pandas \
     python3-pygments python3-setuptools python3-opencv \
     python3-matplotlib python3-scipy \
-    gazebo gazebo-devel```
+    gazebo gazebo-devel
+```
 
 ---
 
@@ -42,7 +43,7 @@ cd ~/PX4-Autopilot
 ```
 
 
-## 🚀 Ejecución del entorno (en tres terminales)
+## Ejecución del entorno (en tres terminales)
 
 
 ### 🖥 Terminal 1: Ingresar al contenedor Docker oficial de desarrollo PX4
