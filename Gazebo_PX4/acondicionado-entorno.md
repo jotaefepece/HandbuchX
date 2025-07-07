@@ -119,3 +119,11 @@ el dron **Iris** en **Gazebo**, controlado mediante el firmware PX4 en modo **SI
 - Se recomienda utilizar tres terminales separadas para mantener separados los procesos de **Docker**, **PX4** y **Gazebo**.
 - El contenedor `px4io/px4-dev` permite mantener aisladas las dependencias y simplifica el proceso de construcción.
 - Asegúrarse de tener los permisos adecuados sobre la carpeta `~/PX4-Autopilot`, especialmente después de ejecutar desde Docker.
+
+
+---
+
+|     Docker compilando      |     PX4 en ejecución      |      Gazebo cargado       |
+|----------------------------|---------------------------|---------------------------|
+| ![pestaña1](pestaña1.png)  | ![pestaña2](pestaña2.png) | ![pestaña3](pestaña3.png) |
+

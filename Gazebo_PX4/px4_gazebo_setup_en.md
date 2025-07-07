@@ -119,3 +119,10 @@ the **Iris** drone in **Gazebo**, controlled using the PX4 firmware in **SITL** 
 - It is recommended to use three separate terminals to keep Docker, PX4, and Gazebo processes isolated.
 - The `px4io/px4-dev` container helps manage dependencies and simplifies the build process.
 - Ensure you have the correct permissions for the `~/PX4-Autopilot` folder, especially after running commands inside Docker.
+
+---
+ 
+|     Docker compiling       |       Launch PX4          |       Launch Gazebo       |
+|----------------------------|---------------------------|---------------------------|
+| ![pestaña1](pestaña1.png)  | ![pestaña2](pestaña2.png) | ![pestaña3](pestaña3.png) |
+
