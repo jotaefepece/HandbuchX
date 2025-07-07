@@ -15,7 +15,7 @@ uso de usuario/contraseña.
 - Tener una carpeta local ya creada con contenido.
 
 
-## 🪪 Paso 1: Verificar y generar clave SSH
+## 📦 Paso 1: Verificar y generar clave SSH
 
 **Revisión de claves**
 `ls ~/.ssh`
@@ -33,7 +33,7 @@ uso de usuario/contraseña.
 
 
 
-## 🪪 Paso 2: Agregar clave en GitHub
+## 📦 Paso 2: Agregar clave en GitHub
 
 Ir a https://github.com/settings/profile
 
@@ -47,7 +47,7 @@ Luego indica clave aceptada (y se reporta vía correo).
 
 
 
-## 🪪 Paso 3: Inicio de git
+## 📦 Paso 3: Inicio de git
 
 **Aquí es sólo crear el archivo**
 `echo "# HandbuchX" >> README.md`
@@ -71,7 +71,7 @@ Luego indica clave aceptada (y se reporta vía correo).
 
 
 
-## 🪪 Paso 4: Verificación y agregando contenido
+## 📦 Paso 4: Verificación y agregando contenido
 
 **Aquí se va a mostrar un saludo**
 `ssh -T git@github.com`
