@@ -1,4 +1,4 @@
-# 🌱 Repositorio de algunas Instalaciones y algunas Pruebas 🌱
+# Repositorio de algunas Instalaciones y Pruebas
 
 Este repositorio nace como una ayuda de memoria personal, pero con la intención de que también 
 pueda ser útil para otras personas que estén explorando, instalando o probando aplicaciones y 
