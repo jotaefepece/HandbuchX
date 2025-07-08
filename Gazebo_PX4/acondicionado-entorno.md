@@ -42,6 +42,8 @@ git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 cd ~/PX4-Autopilot
 ```
 
+---
+
 
 ## Ejecución del entorno (en tres terminales)
 
@@ -77,7 +79,7 @@ gazebo ~/PX4-Autopilot/Tools/sitl_gazebo/worlds/iris.world
 
 ---
 
-## 🔄 Para ejecuciones posteriores
+## Para ejecuciones posteriores
 
 ### 🖥 Terminal 1: Ingresar al contenedor Docker y compilar
 
@@ -126,5 +128,5 @@ el dron **Iris** en **Gazebo**, controlado mediante el firmware PX4 en modo **SI
 
 |     Docker compilando      |     PX4 en ejecución      |      Gazebo cargado       |
 |----------------------------|---------------------------|---------------------------|
-| ![pestaña1](pestaña1.png)  | ![pestaña2](pestaña2.png) | ![pestaña3](pestaña3.png) |
+| ![pestaña1](xpestaña1.png) | ![pestaña2](xpestaña2.png)| ![pestaña3](xpestaña3.png)|
 

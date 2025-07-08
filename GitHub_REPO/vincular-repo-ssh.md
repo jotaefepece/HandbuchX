@@ -6,31 +6,41 @@ Establecer una conexión segura entre una carpeta local y un repositorio
 remoto en GitHub, utilizando autenticación por clave SSH, evitando el 
 uso de usuario/contraseña.
 
+---
+
+
 ## Requisitos previos
 
 - Tener una cuenta en GitHub.
 
-- Tener Git instalado en tu sistema.
+- Tener Git instalado en tu sistema. Ref: `sudo apt install git`
 
 - Tener una carpeta local ya creada con contenido.
 
 
-## 📦 Paso 1: Verificar y generar clave SSH
+---
+
+
+## 📦 Paso 1: Verificar y generar clave SSH 
+
+Seguir las claves y cuentas propias (aquí están modificadas).
 
 **Revisión de claves**
 `ls ~/.ssh`
 
 **Generando clave nueva**
-`ssh-keygen -t ed2559 -C "jpoblbeas@gmail.com"`
+`ssh-keygen -t edd2559 -C "jpoblbeas@gmail.com"`
 
 **Añadir la clave nueva**
 `eval "$(ssh-agent -s)"`
 
-`ssh-add ~/.ssh/id_ed2559`
+`ssh-add ~/.ssh/id_edd2559`
 
 **Para copiar la clave nueva pública**
-`cat ~/.ssh/id_ed2559.pub`
+`cat ~/.ssh/id_edd2559.pub`
 
+
+---
 
 
 ## 📦 Paso 2: Agregar clave en GitHub
@@ -45,6 +55,8 @@ Ahora en mi caso, pide tercera clave para validar.
 
 Luego indica clave aceptada (y se reporta vía correo).
 
+
+---
 
 
 ## 📦 Paso 3: Inicio de git
@@ -70,6 +82,8 @@ Luego indica clave aceptada (y se reporta vía correo).
 `git push -u origin main`
 
 
+---
+
 
 ## 📦 Paso 4: Verificación y agregando contenido
 
@@ -82,7 +96,7 @@ Luego indica clave aceptada (y se reporta vía correo).
 **Sólo para agregar una subcarpeta**
 `git add nombre-de-la-subcarpeta/`
 
-**Para chequear que se está listo para subir**
+**Para chequear que se está listo para subir (dentro de la carpeta)**
 `git status`
 
 **Poner nombre a la actualización a subir**
@@ -90,6 +104,15 @@ Luego indica clave aceptada (y se reporta vía correo).
 
 **Para subir la actualización**
 `git push`
+
+**Verificar que no hay pendientes para subir (dentro de la carpeta)**
+`git status`
+
+
+---
+
+
+## 📦 Paso 5: Actualización de contenido
 
 **Verificar que no hay pendientes para subir**
 `git status`
@@ -103,4 +126,15 @@ Luego indica clave aceptada (y se reporta vía correo).
 **Para subir la actualización**
 `git push`
 
+**Verificar que no hay pendientes para subir**
+`git status`
+
+**Cargando archivo nuevo en nueva carpeta**
+`git add nueva_sub_carpeta/nuevainfo.md`
+
+**Nombre de nueva actualización subir**
+`git commit -m "subiendo contenido a nueva sub carpeta"`
+
+**Para subir la actualización**
+`git push`
 
