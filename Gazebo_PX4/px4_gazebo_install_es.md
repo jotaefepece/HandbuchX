@@ -1,15 +1,15 @@
-# Installing PX4 + Gazebo Environment on Fedora 39 (XFCE)
+# Instalación del entorno PX4 + Gazebo en Fedora 39 (XFCE)
 
-## Goal
+## Objetivo
 
-Set up a functional environment from scratch to simulate drones using **PX4 Autopilot** and 
-**Gazebo** on **Fedora 39 XFCE**, documenting each validated step to ensure correct execution.
+Configurar desde cero un entorno funcional para simular drones con **PX4 Autopilot** y
+ **Gazebo** en **Fedora 39 XFCE**, documentando cada paso validado para asegurar su correcta ejecución.
 
 ---
 
-## 📦 Step 1: Install Dependencies
+## 📦 Paso 1: Instalar dependencias
 
-Install all required system and Python libraries needed to compile and run the environment.
+Instalar todas las librerías necesarias del sistema y de Python para compilar y ejecutar el entorno.
 
 ```bash
 sudo dnf install git cmake ninja-build gcc-c++ \
@@ -25,9 +25,9 @@ sudo dnf install git cmake ninja-build gcc-c++ \
 
 ---
 
-## 📦 Step 2: Install Specific Python Libraries
+## 📦 Paso 2: Instalar librerías Python específicas
 
-Specific versions of Python libraries are needed to avoid compatibility issues.
+Algunas versiones específicas de librerías Python son necesarias para evitar errores de compatibilidad.
 
 ```bash
 pip3 install --user numpy==1.26.4 pyulog pyros-genmsg jsonschema
@@ -36,9 +36,9 @@ pip3 install kconfiglib
 
 ---
 
-## 📦 Step 3: Clone and Build PX4 Autopilot
+## 📦 Paso 3: Clonar y compilar PX4 Autopilot
 
-Clone the official repository.
+Clonar el repositorio oficial.
 
 ```bash
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive
@@ -48,10 +48,10 @@ git submodule update --init --recursive
 
 ---
 
-## 📦 Step 4: Build PX4 + Gazebo Classic
+## 📦 Paso 4: Compilar PX4 + Gazebo Classic
 
-To downgrade CMake for compatibility, to clean previous builds, 
-and to compile with Gazebo Classic support.
+Degradar CMake por compatibilidad, limpiar compilaciones anteriores y 
+compilar con soporte para Gazebo Classic.
 
 ```bash
 cd ~/PX4-Autopilot
@@ -62,9 +62,9 @@ make px4_sitl gazebo-classic
 
 ---
 
-## 📦 Step 5: Set Up Environment
+## 📦 Paso 5: Configurar entorno
 
-To configure environment variables so that Gazebo can find the required models.
+Configurar variables de entorno para que Gazebo encuentre los modelos necesarios.
 
 ```bash
 nano ~/.bashrc
@@ -76,10 +76,10 @@ reboot
 ---
 
 
-## Run the Environment (2 Terminals)
+## Ejecución del entorno (en 2 terminales)
 
 
-### 🖥 Terminal 1: Prepare and launch PX4
+### 🖥 Terminal 1: Preparar y lanzar PX4
 
 ```bash
 cd ~/PX4-Autopilot
@@ -90,7 +90,7 @@ bin/px4 -s etc/init.d-posix/rcS
 
 ---
 
-### 🖥 Terminal 2: Launch the Gazebo simulator
+### 🖥 Terminal 2: Lanzar el simulador Gazebo
 
 ```bash
 cd ~/PX4-Autopilot
@@ -99,16 +99,16 @@ gazebo Tools/sitl_gazebo/worlds/iris.world
 
 ---
 
-## ✅ Expected Result
+## ✅ Resultado
 
-A clean, functional environment running the Iris drone in Gazebo Classic, controlled by PX4 SITL, 
-without extra components or unnecessary dependencies, and without using Docker. 
-This setup provides a stable foundation for upcoming exercises and development.
+Entorno limpio y funcional con el dron Iris en Gazebo Classic, controlado por PX4 SITL, 
+sin elementos adicionales ni dependencias innecesarias, y sin usar Docker. 
+Esta configuración sirve como base estable para futuros ejercicios y desarrollos.
 
 
 ---
- 
-|     Docker compiling       |       Launch PX4          |       Launch Gazebo       |
+
+|     Docker compilando      |     PX4 en ejecución      |      Gazebo cargado       |
 |----------------------------|---------------------------|---------------------------|
 | ![pestaña1](xpestaña1.png) | ![pestaña2](xpestaña2.png)| ![pestaña3](xpestaña3.png)|
 
