@@ -108,7 +108,7 @@ This setup provides a stable foundation for upcoming exercises and development.
 
 ---
  
-|     Docker compiling       |       Launch PX4          |       Launch Gazebo       |
+|  Initial build in Docker   |       Launch PX4          |       Launch Gazebo       |
 |----------------------------|---------------------------|---------------------------|
 | ![pestaña1](xpestaña1.png) | ![pestaña2](xpestaña2.png)| ![pestaña3](xpestaña3.png)|
 

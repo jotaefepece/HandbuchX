@@ -108,7 +108,7 @@ Esta configuración sirve como base estable para futuros ejercicios y desarrollo
 
 ---
 
-|     Docker compilando      |     PX4 en ejecución      |      Gazebo cargado       |
+|Compilación previa en Docker|     PX4 en ejecución      |      Gazebo cargado       |
 |----------------------------|---------------------------|---------------------------|
 | ![pestaña1](xpestaña1.png) | ![pestaña2](xpestaña2.png)| ![pestaña3](xpestaña3.png)|
 
